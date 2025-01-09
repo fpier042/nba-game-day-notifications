@@ -14,7 +14,7 @@ This system fetches NBA game scores and automatically sends updates to subscribe
 ## Prerequisites
 - AWS Account
 - API key from [sportsdata.io](https://sportsdata.io/)
-- Basic familiarity with AWS services
+- Basic familiarity with AWS services and Python
 
 ## Detailed Setup Guide: 
 
