@@ -44,10 +44,10 @@ And aims to provide the user valuable insight on serverless systems whether you'
 - **Event Scheduling**: AWS EventBridge triggers the Lambda function based on a predefined cron (or time-based) schedule (e.g., once a
   day, or every hour)
 - **API Call**: The Lambda function makes an HTTP request to an external API to fetch current NBA game information
-- **Data Processing**: The function processes the obtained data to extract relevant details (e.g., game time, teams, game-status, channel, scores e.t.c)
+- **Data Processing**: The function processes the obtained data to extract relevant details (e.g., game time, teams, game-status, channel, scores, etc.)
 - **User Notification**: The processed data is sent to subscribed users via Amazon SNS
 
-## ⚙️ Project Structure
+## ⚙️ Project Structure (Code)
 
 ```
 nba-notifications/
@@ -73,17 +73,15 @@ nba-notifications/
 
 Before beginning the project, ensure you have the following set up on your machine/computer 🖥️:
 
-- Basic familiarity with AWS services and Python
 - Python 3.7 or higher
 - A NBA API key of your choice 
 - An AWS account with access to SNS, Lambda, and EventBridge
-- A GitHub account with SSH authentication [https://docs.github.com/en/authentication/connecting-to-github-with-ssh]
 
 ### 📘 User Guides
 
 And here are some general resources to provide you further context and ground you as you move through the project:
 
-- [AWS SNS Documentation]([https://docs.aws.amazon.com/s3/index.html](https://docs.aws.amazon.com/sns/)): How to use AWS SNS
+- [AWS SNS Documentation](https://docs.aws.amazon.com/sns/): How to use AWS SNS
 - [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/): How to use AWS Lambda
 - [AWS EventBridge Documentation](https://docs.aws.amazon.com/eventbridge/): How to use AWS EventBriddge
 
@@ -116,7 +114,7 @@ cd game-day-notifications
    - Enter phone number (+1XXXXXXXXXX)
    - Create subscription
 
-### Set Up IAM Permissions:
+### Set Up IAM Permissions (SNS Policies and Lambda Roles):
 
 #### Create an SNS Policy:
 1. Go to IAM → Policies → Create Policy
