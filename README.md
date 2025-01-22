@@ -74,7 +74,7 @@ nba-notifications/
 Before beginning the project, ensure you have the following set up on your machine/computer 🖥️:
 
 - Python 3.7 or higher
-- A NBA API key of your choice 
+- A NBA API key of your choice (in my case, I used Rapid API/ API-NBA: https://rapidapi.com/api-sports/api/api-nba)
 - An AWS account with access to SNS, Lambda, and EventBridge
 
 ### 📘 User Guides
