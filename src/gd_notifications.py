@@ -105,16 +105,21 @@ def lambda_handler(event, context):
         api_key = os.getenv("NBA_API_KEY") or aws.get_secret("/nba/api-key")
         sns_topic_arn = os.getenv("SNS_TOPIC_ARN") or aws.get_secret("/nba/sns-topic-arn")
         
-        # Calculate Central Time
+        # Calculate Eastern Time
         utc_now = datetime.now(timezone.utc)
-        central_time = utc_now - timedelta(hours=6)
-        today_date = central_time.strftime("%Y-%m-%d")
+        eastern_time = utc_now - timedelta(hours=5)
+        today_date = eastern_time.strftime("%Y-%m-%d")
         print(f"Fetching games for date: {today_date}")
-        
+    
+    
         # Fetch NBA data
-        api_url = f"https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/{today_date}?key={api_key}"
-        data = fetch_nba_data(api_url)
-        
+        api_url = f"https://api-nba-v1.p.rapidapi.com/games?date={today_date}"
+        headers = {
+            "X-RapidAPI-Key": api_key,
+            "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com"
+        }
+        data = fetch_nba_data(api_url, headers)
+
         # Process game data
         messages = [format_game_data(game) for game in data]
         final_message = "\n---\n".join(messages) if messages else "No games available for today."
