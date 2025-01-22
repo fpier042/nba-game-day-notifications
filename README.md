@@ -9,7 +9,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [User Guides](#user-guides)
-- [Project Process,Step-by-step](#project-process)
+- [System Implementation,Step-by-step](#system-implementation)
 - [Testing the System](#testing-system)
 - [Potential Future Improvements](#potential-future-improvements)
 - [How to Contribute](#how-to-contribute)
@@ -85,7 +85,7 @@ And here are some general resources to provide you further context and ground yo
 - [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/): How to use AWS Lambda
 - [AWS EventBridge Documentation](https://docs.aws.amazon.com/eventbridge/): How to use AWS EventBriddge
 
-## 👨🏾‍💻 Project Process, Step-by-step
+## 👨🏾‍💻 System Implementation, Step-by-step
 
 ### Clone the Repository:
 
